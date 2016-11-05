@@ -1,7 +1,7 @@
 # Mandatory settings
 
 baseurl: /
-name: Chalk
+name: "Len :: Labs"
 paginate: 25
 paginate_path: "/posts/page/:num/"
 url: # add site url http://example.com/
@@ -13,12 +13,13 @@ discus_identifier: # Add your Disqus identifier
 ga_analytics: # Add your GA Tracking Id
 rss_enabled: true # Change to false if not
 social:
+  gravatar: 'e2a8ead7f70ffafa95672566f2999c8a'
   dribbble: # Add your Dribbble link
   facebook: # Add your Facebook link
-  github: # Add your GitHub link
+  github: 'https://github.com/0xlen'
   linkedin: # Add your LinkedIn link
   twitter: # Add your Twitter handle
-  email: # Add your Email address
+  email: 'eason@lenlabs.com'
   bitcoin: # Add your Bitcoin link or address
 
 # Important settings (change at own risk)
