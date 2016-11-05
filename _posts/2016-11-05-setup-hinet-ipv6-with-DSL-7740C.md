@@ -2,7 +2,7 @@
 layout: post
 title: "中華電信hinet 申請及設定IPv6 (DSL-7740C)"
 description: "中華電信Hinet設定IPv6, 以D-Link DSL-7740C為例"
-tags: [HiNet, IPv6, dlink]
+tags: [hinet, ipv6, dlink]
 ---
 
 {% include image.html path="posts/2016/11/hinet-ipv6/ping-facebook-v6.png" path-detail="posts/2016/11/hinet-ipv6/ping-facebook-v6.png" alt="Ping facebook IPv6" %}
