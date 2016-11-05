@@ -4,3 +4,6 @@
 /.asset-cache/*
 /_site/*
 /_assets/bower/*
+*.vim
+*.swp
+*.swo
