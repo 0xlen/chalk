@@ -9,8 +9,8 @@ blog_theme: light # Or use dark
 
 # Optional settings
 
-discus_identifier: # Add your Disqus identifier
-ga_analytics: # Add your GA Tracking Id
+discus_identifier: 'lenlabs' # Add your Disqus identifier
+ga_analytics: 'UA-80058083-2' # Add your GA Tracking Id
 rss_enabled: true # Change to false if not
 social:
   gravatar: 'e2a8ead7f70ffafa95672566f2999c8a'
