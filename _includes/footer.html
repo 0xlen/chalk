@@ -1,4 +1,6 @@
 <footer class="footer reveal">
-  <p>Eason Cao</p>
-  <p>len@lenlabs.com</p>
+  <p><a href="{{ site.baseurl }}about">Eason Cao</a></p>
+  {% if site.social.email %}
+  <p><a href="mailto:{{ site.social.email }}" target=_blank>{{ site.social.email }}</a></p>
+  {% endif %}
 </footer>
