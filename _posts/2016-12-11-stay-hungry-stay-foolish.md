@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stay hungry, stay foolish"
-description: "當你試著回歸本質，什麼是真正的你？"
+description: "求知若飢，虛心若愚。"
 og_image: "posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
 tags: [mood]
 ---
