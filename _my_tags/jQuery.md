@@ -1,0 +1,4 @@
+---
+slug: jQuery
+name: jQuery
+---
