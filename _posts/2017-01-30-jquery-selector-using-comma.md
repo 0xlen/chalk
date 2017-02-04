@@ -58,19 +58,23 @@ $('div').on('click', function(e) {
 
 也就是說，下段程式碼，均有同等的效果。
 
+- Example 1
 ```javascript
 var $container = $('div');
 $('button', $container)
 ```
 
+- Example 2
 ```javascript
 $('div button')
 ```
 
+- Example 3
 ```javascript
 $('div').find('button')
 ```
 
+- Example 4
 ```javascript
 var $container = $('div');
 $container.find('button')
