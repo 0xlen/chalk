@@ -1,16 +1,12 @@
-**Eason Cao**. 網路上慣用的 ID 是 Len (0xlen),
+**Eason Cao**. aka Len (0xlen),
 
-目前是個大學生，喜歡寫code跟煮菜，
+I have a dream, the dream is affect you and everyone in the world.
 
-興趣是養server。
-
-因為喜歡computer science，涉獵過不同領域的東西，
-
-目前在尋找自己真正想繼續走的領域，
+Learning is a long journey, but I enjoy it.
 
 如果有任何想法或是問題，歡迎寄信到 [{{ site.social.email }}](mailto:{{ site.social.email }})
 
-目前慣用的Tools
+Tools
 ===
 
 - PHP / Laravel
@@ -22,8 +18,8 @@
 Experience
 ===
 
-- [NTUT CSIE CNC](http://cnc.ntut.edu.tw) 網路組
-- [NTUT CSIE 14th系學會](http://csie.ntut.cc) 資訊長
+- [NTUT CSIE Computer and Network Center](http://cnc.ntut.edu.tw) networking section
+- [NTUT CSIE 14th Student Association](http://csie.ntut.cc), I was responsible for information management
 - phpconf 2016 visitor
 - phpconf 2014 visitor
 - sitcon 2015 attendee
