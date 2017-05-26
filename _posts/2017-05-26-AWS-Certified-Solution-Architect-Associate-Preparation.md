@@ -3,7 +3,7 @@ layout: post
 title: "AWS Certified Solution Architect Associate 認證考試準備及心得"
 description: "AWS Certified Solution Architect Associate Preparation"
 og_image: "aws-saa-cert.png"
-tags: ['AWS', 'Certificate']
+tags: ['aws', 'certificate']
 ---
 
 {% include image-ref.html path="https://www.certmetrics.com/api/ob/image/amazon/c/1" path-detail="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-05-19&ci=AWS00264275" alt="AWS Solutions Architect Associate" %}
