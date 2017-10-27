@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+    - 2.3.3
+
+# branch whitelist, only for master branch
+branches:
+    only:
+    - master
+
+before_script:
+    - npm install -g bower
+    - chmod +x ./bin/travis-build
+
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script:
+    - git config --global user.email "a78965@gmail.com"
+    - git config --global user.name "Eason Cao"
+    - git clone https://$GH_TOKEN@github.com/0xlen/blog blog
+    - cd blog/
+    - ./bin/travis-build
+
+exclude: [vendor]
+sudo: false
