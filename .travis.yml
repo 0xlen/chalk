@@ -14,7 +14,6 @@ before_script:
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
 script:
-    - ./bin/setup
     - git config --global user.email "a78965@gmail.com"
     - git config --global user.name "Eason Cao"
     - git clone https://$GH_TOKEN@github.com/0xlen/blog blog
