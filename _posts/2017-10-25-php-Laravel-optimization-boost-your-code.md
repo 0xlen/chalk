@@ -165,7 +165,7 @@ class UserController extends Controller
 }
 ```
 
-[因為 Eloquent 動態 Property 屬於 lazy loading 的特性][laravel-5.5-relationships-methods-vs-dynamic-property]，Laravel Eloquent relationships 的 SQL 查詢是在 `foreach` 迴圈內每次執行時被建立的。
+[因為 Eloquent 動態 Property 屬於 lazy loading 的特性][laravel-5.5-eloquent-relationships-methods-vs-dynamic-property]，Laravel Eloquent relationships 的 SQL 查詢是在 `foreach` 迴圈內每次執行時被建立的。
 
 > Dynamic properties are "lazy loading", meaning they will only load their relationship data when you actually access them. Because of this, developers often use eager loading to pre-load relationships they know will be accessed after loading the model. Eager loading provides a significant reduction in SQL queries that must be executed to load a model's relations.
 
