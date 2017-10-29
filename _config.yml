@@ -24,6 +24,11 @@ social:
 
 # Important settings (change at own risk)
 
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+
 assets:
   compress:
     css: true
