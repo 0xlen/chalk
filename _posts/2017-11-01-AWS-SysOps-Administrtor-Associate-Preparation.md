@@ -25,9 +25,13 @@ tags: ['aws', 'certificate']
 
 ## 考試地點
 
-今年度九月開始 AWS 官方授權的考試代理商從 Kryterion 轉為 PSI ，這次我選擇的考試在 [Global Education Association in Taiwan (AMP)][map] (對不起我不確定中文叫什麼，應該是托福相關語言中心相關的考試代理商)。因為是語言相關的考試中心，我去考的時候也是本年度第五場，所以考場設備沒有像恆逸是有隔間的考場，只有一台筆電和約 30 人的小教室考試。
+今年度九月開始 AWS 官方授權的考試代理商從 Kryterion 轉為 PSI ，這次我選擇的考試在 [Global Education Association in Taiwan (AMP)][map] (對不起我不確定中文叫什麼，應該是托福相關語言中心相關的考試代理商)。因為是語言相關的考試中心，我去考的時候，是本年度第五場，所以考場設備並沒有像恆逸提供隔間的考場，只有一台筆電和約 30 人的小教室考試。
 
-考試的時候沒有紙筆是比較困擾的，特別是題目需要畫出拓墣的時候還蠻有用的，考試中途網路還發生斷線，考完之後有跟親切的~~監考姊姊~~反應了一下這些部分，避免大家不要再踩到跟我一樣的坑啊！
+這次考場比較嚴謹需要查驗護照，這部分在試後跟親切的~~監考姊姊~~聊了一下得知前面有三場的應試人因為沒有帶護照被拒絕考試，不過當初恆逸只需要備有身份證件即可，建議大家攜帶護照應考，如果沒有護照建議考前跟考試中心電話確認一下。
+
+當時考試單位在考試的時候沒有提供紙筆是比較困擾的地方，考場若能使用紙筆是非常有用的，特別是題目需要畫出拓墣的時候才能勾勒出對應的系統架構。比較慘的是考試中途網路還發生斷線，虛驚一場。
+
+不過，上述問題在考完之後也跟親切的~~監考姊姊~~反應了一下這些部分，包含反應僅需查驗身份證件和過去不用護照的問題，避免大家不要再踩到跟我一樣的坑啊！
 
 
 ## 測驗語文、形式、題數及時間
@@ -55,7 +59,7 @@ tags: ['aws', 'certificate']
 - [Elastic Compute Cloud][ec2-metrics]
 - [Elastic Block Storage][ebs-metrics]
 - [Elastic Load Balancer][elb-metrics]
-- [RDS](rds-metrics)
+- [RDS][rds-metrics]
 
 
 考試前建議先了解一次考試的幾個大方向，考試官方頁面可以參考 [AWS 官方的認證頁面][aws-sysops] ，[Blueprint][aws-sysops-blueprint] (必讀)。
@@ -96,11 +100,11 @@ AWS Fundamentals，涵蓋 EC2 / VPC / DynamoDB / SWF (Simple Work Flow) / S3 (Co
 
 這張認證最重要的在於 HA (High Availability) 和災難復原，所以像是 RDS 會考非常多關於 Backup window / Backup strategies 相關的問題，以及 AutoScaling。
 
-如果像我過去沒有使用過 AWS 的經驗，可以透過 [acloud guru][acloud-guru] 推出 [AWS Certified SysOps Administrator - Associate 2017][acloud-guru-sysops] 來快速入門，
+如果對於 AWS 的使用並不熟悉經驗，可以透過 [acloud guru][acloud-guru] 推出 [AWS Certified SysOps Administrator - Associate 2017][acloud-guru-sysops] 來快速入門，
 
 能夠有系統性的幫助入門了解 AWS 各式各樣的服務，完整的濃縮。
 
-**推薦大家仔細閱讀過幾個重點服務的 FAQ 常見問答集，因為常見的問題確實就是成為考題的必要。**
+**同樣推薦大家仔細閱讀過幾個重點服務的 FAQ 常見問答集，因為常見的問題確實就是成為考題的必要。**
 
 - VPC (Internet Gateway / NAT 會出現在 Troubleshooting 的問題)
 - EC2 (AMI / AutoScaling / ELB / ALB / Spot, Reserved, On-demand 差別)
@@ -125,10 +129,10 @@ AWS Fundamentals，涵蓋 EC2 / VPC / DynamoDB / SWF (Simple Work Flow) / S3 (Co
 
 [aws-saa]: /posts/aws-certified-solution-architect-associate-preparation
 [aws-da]: /posts/aws-developer-associate-preparation
-[elb-mtrics]: http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html
-[ec2-mtrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ec2-metricscollected.html
-[rds-mtrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/rds-metricscollected.html
-[ebs-mtrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ebs-metricscollected.html
+[elb-metrics]: http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-cloudwatch-metrics.html
+[ec2-metrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ec2-metricscollected.html
+[rds-metrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/rds-metricscollected.html
+[ebs-metrics]: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ebs-metricscollected.html
 [aws-sysops]: https://aws.amazon.com/tw/certification/certified-sysops-admin-associate/
 [aws-sysops-blueprint]: http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_sysops_associate_blueprint.pdf
 [map]: https://goo.gl/maps/Ldk5v8cgrU42
