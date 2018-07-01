@@ -10,3 +10,7 @@ gem "mini_magick"
 gem "sass"
 gem "uglifier"
 gem "kramdown"
+
+group :jekyll_plugins do
+    gem "jekyll-youtube"
+end
