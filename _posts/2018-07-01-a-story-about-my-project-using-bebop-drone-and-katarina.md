@@ -2,7 +2,7 @@
 layout: post
 title: "一個關於我大學專題的故事 - 四軸無人機專案 Parrot Bebop Drone 和 Python library Katarina"
 description: "A story about my student project of undergraduate degree, a Bebop Drone and Open Source library - Katarina"
-tags: [Python]
+tags: ['python', 'drone']
 ---
 
 ## 前言

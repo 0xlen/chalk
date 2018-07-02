@@ -2,7 +2,7 @@
 layout: post
 title: "救回 Windows 上意外關閉且遺失的 Atom 筆記 (1.27.2 x64)"
 description: "Recover Atom note on Windows for version 1.27.2 x64"
-tags: []
+tags: ['atom', 'windows']
 ---
 
 這篇文章主要是記錄下在 Windows 上使用將意外關閉的 [Atom][atom] 筆記復原。
