@@ -6,7 +6,7 @@ og_image: "aws-sysops-cert.png"
 tags: ['aws', 'certificate']
 ---
 
-{% include image-ref.html path="https://www.certmetrics.com/api/ob/image/amazon/c/3" path-detail="https://www.certmetrics.com/amazon/public/badge.aspx?i=3&t=c&d=2017-10-18&ci=AWS00264275" alt="AWS Certified SysOps Administrator - Associate" %}
+{% include image-asset-ref.html path="aws-sysops-cert.png" path-detail="https://www.certmetrics.com/amazon/public/badge.aspx?i=3&t=c&d=2017-10-18&ci=AWS00264275" alt="AWS Certified SysOps Administrator - Associate" %}
 
 ## 關於考前準備
 
