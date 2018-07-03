@@ -75,7 +75,7 @@ Katarina 是一個開源的 Python 函式庫，是由一群捷克的開發者組
 - [libARDiscovery](https://github.com/Parrot-Developers/libARDiscovery/blob/2eb8441bd1834928cd77b3ce4f4dddee4434f024/Includes/libARDiscovery/ARDISCOVERY_Connection.h#L58)
 - [Parrot-Developers-Stream](https://github.com/Parrot-Developers/application_notes/blob/5fd43c383ad58a2763f31f58c85f5f1e6ab6877b/BebopStreamVLC/BebopDroneStartStream.c#L551)
 
-此外，我也在網路上找到很有趣的一篇文章：[Stream Bebop Video With Python Opencv](rtp-stream-using-python)，這個範例使用 Python 去執行另一個開源一樣提供給 Bebop 以 Node.js 寫成的 [node-bebop](node-bebop) 專案，利用呼叫 Node.js 版本的函式庫內提供的串流方法進行 RTP 串流，實際上，是蠻有趣的作法。
+此外，我也在網路上找到很有趣的一篇文章：[Stream Bebop Video With Python Opencv][rtp-stream-using-python]，這個範例使用 Python 去執行另一個開源一樣提供給 Bebop 以 Node.js 寫成的 [node-bebop][node-bebop] 專案，利用呼叫 Node.js 版本的函式庫內提供的串流方法進行 RTP 串流，實際上，是蠻有趣的作法。
 
 於是，我就嘗試改改了幾行代碼，經過我的測試並應用在我的專題內，送了一個 Pull Request 給了作者，在與無人機連接時送出必要的影像訊息，在執行時能夠使用 RTP 串流的方式接收影像：
 
