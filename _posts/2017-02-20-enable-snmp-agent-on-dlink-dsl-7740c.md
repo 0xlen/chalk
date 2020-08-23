@@ -8,7 +8,7 @@ tags: [dlink, hinet]
 
 可以在中華電信的 DSL-7740C 啟用 SNMP Agent 達到監控的目的。
 
-首先進入 DSL-7740C 設定畫面，相關帳號密碼可詳閱 [上一篇的設定](https://blog.lenlabs.com/posts/setup-hinet-ipv6-with-dsl-7740c)，
+首先進入 DSL-7740C 設定畫面，相關帳號密碼可詳閱 [上一篇的設定](https://easoncao.com/setup-hinet-ipv6-with-DSL-7740C/)，
 
 
 - 進入 Advanced > SNMP 頁面

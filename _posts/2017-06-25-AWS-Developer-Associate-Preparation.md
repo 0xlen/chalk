@@ -108,7 +108,7 @@ AWS Fundamentals，涵蓋 EC2 / VPC / DynamoDB / SWF (Simple Work Flow) / S3 (Co
 祝大家順利通過認證！
 
 
-[0]: https://blog.lenlabs.com/posts/aws-certified-solution-architect-associate-preparation
+[0]: https://easoncao.com/AWS-Certified-Solution-Architect-Associate-Preparation/
 [1]: http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_developer_associate_examsample.pdf
 [2]: https://aws.amazon.com/tw/certification/certified-developer-associate/
 [3]: https://d0.awsstatic.com/training-and-certification/docs-dev-associate/AWS_certified_developer_associate_blueprint.pdf
