@@ -10,13 +10,15 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
+This article is describing the thing you need to aware when using ALB Ingress Controller (AWS Load Balancer Controller) to do deployment and prevent 502 errors.
+
 ## What's ALB Ingress Controller
 
 Kubernetes doesn't involve the Application Load Balancer (ALB) deployment in the native implementation for using Kubernetes service object with `type=LoadBalancer`. Therefore, if you would like to expose your container service with Application Load Balancer (ALB) on EKS, it is recommended to integrate with ALB Ingress Controller.
 
 If you don't know about what is the ALB Ingress Controller, here is an overview diagram to help you catch up:
 
-{% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/controller-design.png" alt="How ALB ingress controller works" caption="How ALB ingress controller works - [source](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/controller/how-it-works/)" %}
+{% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/controller-design.png" alt="How ALB ingress controller works" caption="How ALB ingress controller works - [source](https://kubernetes-sigs.github.io/aws-load-balancer-controller/guide/controller/how-it-works/)" %}
 
 - (1) The controller watches for ingress events from the API server.
 - (2) An ALB (ELBv2) is created in AWS for the new ingress resource. This ALB can be internet-facing or internal.
@@ -257,7 +259,7 @@ So, in these cases, you can see the downtime:
 
 Let's say if you try to remove the encapsulation layer of the Kubernetes networking design and make thing more easier based on the AWS supported CNI Plugin (Only rely on the ELB to forward the traffic to the Pod directly by using `IP mode` with annotation setting `alb.ingress.kubernetes.io/target-type: ip` in my Ingress object), you can see the downtime more obvious when Pod doing RollingUpdate. That's because not only the problem we mentioned the issues in case (1)/(2)/(3), but also there has different topic on the behavior of ALB Ingress Controller need to be covered if the question comes to **zero downtime deployment**: 
 
-Here is an example by using IP mode (`alb.ingress.kubernetes.io/target-type: ip`) as [resgistration type](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/ingress/annotation/#target-type) to route traffic directly to the Pod IP
+Here is an example by using IP mode (`alb.ingress.kubernetes.io/target-type: ip`) as [resgistration type](https://kubernetes-sigs.github.io/aws-load-balancer-controller/guide/ingress/annotations/#target-type) to route traffic directly to the Pod IP
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -365,7 +367,7 @@ In this case, if the Pod got terminated by Kubernetes but `Target-1` or `Target-
 {% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/deployment-workflow-alb-ingress-controller-7-new-pod-in-active.png" alt="Deployment workflow of ALB Ingress Controller - 7. The service need to wait a period to recover until new targets passed the ELB health check" caption="Deployment workflow of ALB Ingress Controller - 7. The service need to wait a period to recover until new targets passed the ELB health check" %}
 
 
-### How to resolve the issue and meet zero-downtime?
+## How to resolve the issue and meet zero-downtime?
 
 As mentioned in the previous workflow, it is required to use several workarounds to ensure the Pod state consistency between ALB, ALB Ingress Controller and Kubernetes. Here are few things you can aware:
 
@@ -444,7 +446,7 @@ You can use [Pod Lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/p
 > Note: If a container has a preStop hook configured, that runs before the container enters the Terminated state. Also, if the preStop hook needs longer to complete than the default grace period allows, you must modify `terminationGracePeriodSeconds` to suit this.
 
 
-#### An example to achieve zero downtime when doing rolling update after applying methods above
+### An example to achieve zero downtime when doing rolling update after applying methods above
 
 ```yaml
 apiVersion: apps/v1
@@ -559,7 +561,7 @@ Even the technology is always in revolution, I am still willing to help people b
 
 The article was written based on my working experience, many communications back and forth with different customers using AWS, it might not be perfect but I hope it is helpful to you. For sure, if you find any typo or have any suggestions, please feel free and leave comment below.
 
-##### References
+### References
 
 - [ALB Ingress Controller on Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 - [Using pod conditions / pod readiness gates](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/blob/master/docs/guide/ingress/pod-conditions.md)
