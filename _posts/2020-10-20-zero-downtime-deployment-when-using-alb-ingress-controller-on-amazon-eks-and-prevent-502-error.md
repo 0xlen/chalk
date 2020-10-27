@@ -30,7 +30,7 @@ If you don't know about what is the ALB Ingress Controller, here is an overview 
 
 ## How to deploy Kubernetes with ALB Ingress Controller (AWS Load Balancer Controller)?
 
-Basically, the ALB Ingress Controller will be deployed as a Pod running on your worker node while continously monitor/watch your Pod and cluster state. Once there have any request for `Ingress`  object creation, ALB Ingress Controller will help you to manage and create Application Load Balancer resource. Here is a part of example for `v1.1.8` deployment manifest:
+Basically, the ALB Ingress Controller will be deployed as a Pod running on your worker node while continously monitor/watch your cluster state. Once there have any request for `Ingress`  object creation, ALB Ingress Controller will help you to manage and create Application Load Balancer resource. Here is a part of example for `v1.1.8` deployment manifest:
 
 ```yaml
 apiVersion: apps/v1
@@ -147,8 +147,8 @@ spec:
 
 Let's use the 2048 game as example to describe the scenario when you are trying to roll out a new version of your container application. In my environment, I have:
 
-- a Kubernetes service `service/service-2048` using `NodePort` to expose the service
-- the deployment also have 5 copy of Pods for 2048 game, which are the backend application is waiting the connections forwarding by Application Load Balancer (ALB)
+- A Kubernetes service `service/service-2048` using `NodePort` to expose the service
+- The deployment also have 5 copy of Pods for 2048 game, which is my backend application waiting for connections forwarding by Application Load Balancer (ALB)
 
 ```bash
 NAMESPACE     NAME                                          READY   STATUS    RESTARTS   AGE
@@ -190,7 +190,7 @@ $ curl -s xxxxxxxx-2048game-xxxxxxxx-xxxx-xxxxxxxxx.ap-northeast-1.elb.amazonaws
 
 {% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/alb-ingress-controller-with-2048-game-screenshot.png" alt="2048 Game deployed with ALB Ingress Controller" caption="2048 Game deployed with ALB Ingress Controller" %}
 
-Like any kind of container application, as a administrator, SRE (Site Reliability Engineer), part of operation team or DevOps engineer, the goal and our duty is: **we always try to ensure the service can run properly without any issue and without any interruption**, especially facing the challenges like: when your developers are saying that **"Oh! we need to upgrade/update the application"**, **"we are going to roll out a bug fix"**, **"the new feature is going to online"**, any service downtime can lead anyone of stakeholders(users, operation team or leadership) unhappy.
+Like any kind of container application, as a administrator/SRE (Site Reliability Engineer)/part of operation team or DevOps engineer, the goal and our duty is: **we always try to ensure the service can run properly without any issue and without any interruption**, especially facing the challenges like: when your developers are saying that **"Oh! we need to upgrade/update the application"**, **"we are going to roll out a bug fix"**, **"the new feature is going to online"**, any service downtime can lead anyone of stakeholders(users, operation team or leadership) unhappy.
 
 I am going to use a simple loop trick to continously access my container service via the endpoint `xxxxxxxx-2048game-xxxxxxxx-xxxx-xxxxxxxxx.ap-northeast-1.elb.amazonaws.com` to demonstrate a scenario: This is a popular web service and we always have customer access to it. (Like social media service, bitcoin trading platform or any else, we basically have zero tolerance for any service downtime as it can impact our revenue.), as below:
 
@@ -237,7 +237,7 @@ spec:
 
 ### Scenario: Rolling the new container image to existing container application with potential service downtime
 
-When rolling the new version of my container application (for example, I was update my deployment by replacing the container image with image `nginx` to demonstrate this behavior), there potentially can have a period of time would have chance to get `HTTP Status Code 502` error:
+When rolling the new version of my container application (for example, I update my deployment by replacing the container image with image `nginx`), there potentially can have a period of time that would get `HTTP Status Code 502` error in few hits:
 
 {% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/http-502-error-during-deployment-using-instance-mode.png" alt="The HTTP 502 Error response from ELB (instance mode)" caption="The HTTP 502 Error response from ELB during the rolling update deployment (instance mode)" %}
 
@@ -257,7 +257,7 @@ So, in these cases, you can see the downtime:
 - (2) Follow the iptables rules, the traffic forward to the Pod just terminated due to RollingUpdate (Or the Pod just got the reqeust but need to be terminated, it haven't response back yet, caused the ELB doesn't get the response from Pod.)
 - (3) ELB established connection with Worker Node-1, once the packet enter into the Worker Node-1, it follows the iptables then forward it to the Pod running on Worker Node-2 (jump out the current worker node), however, the Worker Node-2 just got terminated due to auto scaling strategy or any replacement due to upgrade, caused the connection lost.
 
-Let's say if you try to remove the encapsulation layer of the Kubernetes networking design and make thing more easier based on the AWS supported CNI Plugin (Only rely on the ELB to forward the traffic to the Pod directly by using `IP mode` with annotation setting `alb.ingress.kubernetes.io/target-type: ip` in my Ingress object), you can see the downtime more obvious when Pod doing RollingUpdate. That's because not only the problem we mentioned the issues in case (1)/(2)/(3), but also there has different topic on the behavior of ALB Ingress Controller need to be covered if the question comes to **zero downtime deployment**: 
+Let's say if you try to remove the encapsulation layer of the Kubernetes networking design and make thing more easier based on the AWS supported CNI Plugin (Only rely on the ELB to forward the traffic to the Pod directly by using `IP mode` with annotation setting `alb.ingress.kubernetes.io/target-type: ip` in my Ingress object), you can see the downtime more obvious when Pod doing RollingUpdate. That's because not only the problem we mentioned the issues in case (1)/(2)/(3), but also there has different topic on the behavior of ALB Ingress Controller need to be covered if the question comes to **zero downtime deployment**:
 
 Here is an example by using IP mode (`alb.ingress.kubernetes.io/target-type: ip`) as [resgistration type](https://kubernetes-sigs.github.io/aws-load-balancer-controller/guide/ingress/annotations/#target-type) to route traffic directly to the Pod IP
 
@@ -333,7 +333,7 @@ Which result in the service to be unavailable and return HTTP 502.
 
 To better understand that, I made following diagrams, so it might be helpful to you understanding the workflow:
 
-1) In diagram, I used following IP addresses to remark and help you recognize the new/old Pods and here is the initial deployment.
+1) In diagram, I used following IP addresses to remark and help you recognize new/old Pods. Here is the initial deployment.
 
 - Old Pods: Target-1(Private IP: 10.1.1.1), Target-2(Private IP: 10.2.2.2)
 - New Pods: Target-3(Private IP: 10.3.3.3), Target-4(Private IP: 10.4.4.4)
@@ -495,7 +495,7 @@ Once rolling the new version of the container image, the deployment goes smoothl
 
 {% include figure image_path="/assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/zero-downtime-deployment-with-alb-demo.png" alt="Zero downtime with ALB Ingress Controller - Can see the targets are gracefully replaced when the Kubernetes is doing rolling update" caption="Zero downtime with ALB Ingress Controller - Can see the targets are gracefully replaced when the Kubernetes is doing rolling update" %}
 
-In my scenario, the Kubernetes need to take at least 40 seconds termination period for single Pod, so the old targets are gradually moved out instead of remove all of them within few seconds at once, until entire target groups only exists new targets.
+In my scenario, the Kubernetes need to take at least 40 seconds termination period for single Pod, so the old targets are gradually moved out instead of remove all of them at once within few seconds, until entire target group only exists new targets.
 
 Also, the client can get normal responses from old Pods/existing connection during the deployment:
 
@@ -549,17 +549,17 @@ HTTPCode=200_TotalTime=0.010136
 Welcome to nginx!
 ```
 
-This is the practice in case having ALB Ingress Controller for doing graceful deployment with `RollingUpdate`. However, it is another big topic need to be discussed regarding what type of the application when rolling the update, because maybe some kind of applications need to establish long connection with the ELB or have requirement for considering persistence data need to be stored on the backend. All these things can bring out other issues we need to talk about.
+This is the practice in case having ALB Ingress Controller for doing graceful deployment with `RollingUpdate`. However, it is another big topic need to be discussed regarding what type of the application when rolling the update. Because maybe some kind of applications need to establish long connection with the ELB or have requirement for considering persistence data need to be stored on the backend. All these things can bring out other issues we need to talk about.
 
-But in summarize, with the deployment strategy above, it is also recommended to design the client/backend application with stateless behavior and implement the retry/fault-tolerance, this usually helps to reduce the customer complain and provide better user experience in most common use case.
+But in summarize, with the deployment strategy above, it is also recommended to design the client/backend application as stateless, implement retry and fault-tolerance. These mothod usually help to reduce the customer complain and provide better user experience in most common use case.
 
 ## Conclusion
 
-The article is describing the potential issue when doing rolling update in the scenario having container service integrating with ALB Ingress Controller (AWS Load Balancer Controller) due to the current design of Kubernetes is involving the state inconsistent issue when you are exposing the service with Application Load Balancer.
+Due to the current design of Kubernetes, it is involving the state inconsistent issue when you are exposing the service with Application Load Balancer. Therefore, in this article, I mentioned the potential issue when doing rolling update in the scenario having container service integrating with ALB Ingress Controller (AWS Load Balancer Controller).
 
-Even the technology is always in revolution, I am still willing to help people better handle the deployment strategy. So in this article, , I used couple hours to draft this content and tried to cover several major issues, things you might need to aware, break down the entire workflow and shared the practical suggestions can be achieved in ALB Ingress Controller in order to meet the goal when doing zero downtime deployment in your team.
+Even the technology is always in revolution, I am still willing to help people better handle the deployment strategy. I used couple hours to draft this content and tried to cover several major issues, metioned things you might need to aware, break down the entire workflow and shared few practical suggestions that can be achieved in ALB Ingress Controller in order to meet the goal when doing zero downtime deployment.
 
-The article was written based on my working experience, many communications back and forth with different customers using AWS, it might not be perfect but I hope it is helpful to you. For sure, if you find any typo or have any suggestions, please feel free and leave comment below.
+The article was written based on my working experience (Of course many communications back and forth with different customers using AWS), it might not be perfect but I hope it is helpful to you. For sure, if you find any typo or have any suggestions, please feel free and leave comment below.
 
 ### References
 
