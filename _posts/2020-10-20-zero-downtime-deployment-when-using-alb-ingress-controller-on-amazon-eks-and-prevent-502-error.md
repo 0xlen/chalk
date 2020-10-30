@@ -8,6 +8,7 @@ header:
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
+classes: wide
 ---
 
 This article is describing the thing you need to aware when using ALB Ingress Controller (AWS Load Balancer Controller) to do deployment and prevent 502 errors.
