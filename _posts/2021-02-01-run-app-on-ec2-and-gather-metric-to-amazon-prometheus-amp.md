@@ -1,6 +1,6 @@
 ---
 title: "Run application on EC2 and gather metric to Amazon Managed Service for Prometheus (Amazon Prometheus / AMP)"
-description: "This article is describing the thing you need to aware for DNS resolution issue can occur on Kubernetes."
+description: "In this article, it shows a example to use Amazon Managed Service for Prometheus (AMP) to gather metrics when running standalone application on EC2 instance, rather than having Kubernetes to deploy. Giving the overview and share some tips you have to know if you are trying to push metrics to AMP."
 tags: ['aws', 'amazon web services', 'amazon', 'Prometheus', 'AMP', 'Amazon Managed Service for Prometheus', 'EC2', 'Elastic Compute Cloud']
 toc: true
 toc_label: "Table of Contents"
