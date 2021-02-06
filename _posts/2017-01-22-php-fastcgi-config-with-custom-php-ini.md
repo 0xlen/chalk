@@ -1,7 +1,9 @@
 ---
 title: "在 PHP FastCGI 環境下自訂使用者的 php.ini 設定"
 description: "如何在 PHP FastCGI 環境下自訂使用者的 php.ini 設定，使每個使用者有獨立的設定檔"
-og_image: "/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png"
+header:
+  og_image: "/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png"
+  teaser: "/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png"
 tags: [php, apache]
 ---
 

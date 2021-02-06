@@ -1,7 +1,9 @@
 ---
 title: "AWS Certified DevOps Engineer - Professional 認證考試準備及心得"
 description: "AWS Certified DevOps Engineer - Professional Preparation"
-og_image: "aws-devops-pro-cert.png"
+header:
+  og_image: "/assets/images/aws-devops-pro-cert.png"
+  teaser: "/assets/images/aws-devops-pro-cert.png"
 tags: ['aws', 'certificate', 'DevOps']
 ---
 

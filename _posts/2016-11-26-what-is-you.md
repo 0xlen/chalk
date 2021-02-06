@@ -1,7 +1,9 @@
 ---
 title: "讀大學：回歸本質，找尋自己"
 description: "當你試著回歸本質，什麼是真正的你？"
-og_image: "/assets/images/posts/2016/11/what-is-you/you.jpg"
+header:
+  og_image: "/assets/images/posts/2016/11/what-is-you/you.jpg"
+  teaser: "/assets/images/posts/2016/11/what-is-you/you.jpg"
 tags: [mood]
 ---
 

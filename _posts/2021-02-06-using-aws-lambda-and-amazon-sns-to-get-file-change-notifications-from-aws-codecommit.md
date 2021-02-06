@@ -4,6 +4,7 @@ description: "在這篇內容中，我會展示如何整合 AWS Lambda 及 Amazo
 tags: ['aws', 'amazon web services', 'Lambda', 'Lambda Function', 'severless', 'CodeCommit', 'AWS CodeCommit', 'SNS', 'Amazon SNS', 'Git']
 header:
   og_image: /assets/images/posts/2021/02/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit/architecture.png
+  teaser: /assets/images/posts/2021/02/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit/architecture.png
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"

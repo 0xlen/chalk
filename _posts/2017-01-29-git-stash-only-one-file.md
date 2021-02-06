@@ -1,7 +1,9 @@
 ---
 title: "讓 git 不必 commit 而暫存特定檔案的修改"
 description: "利用一些方法讓 git 不必 commit 而暫存檔案的修改，並且只暫存特定檔案。"
-og_image: "/assets/images/posts/2017/01/git-stash-only-one-file/git.png"
+header:
+  og_image: "/assets/images/posts/2017/01/git-stash-only-one-file/git.png"
+  teaser: "/assets/images/posts/2017/01/git-stash-only-one-file/git.png"
 tags: [git]
 ---
 

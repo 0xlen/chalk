@@ -1,7 +1,9 @@
 ---
 title: "Apache / PHP 上傳大檔的注意事項"
 description: "Apache / PHP 上傳大檔案的一些基本設定及注意事項"
-og_image: "/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png"
+header:
+  og_image: "/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png"
+  teaser: "/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png"
 tags: [php, apache]
 ---
 

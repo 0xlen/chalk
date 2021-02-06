@@ -1,7 +1,9 @@
 ---
 title: "Laravel 5 自訂分頁 (Pagination) 樣式"
 description: "Custom pagination in Laravel 5"
-og_image: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
+header:
+  og_image: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
+  teaser: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
 tags: [php, laravel]
 ---
 

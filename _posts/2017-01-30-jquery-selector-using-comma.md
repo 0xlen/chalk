@@ -1,7 +1,9 @@
 ---
 title: "jQuery Selector 使用逗點之間的差異"
 description: "jQuery Selector 逗點之間的區別"
-og_image: "/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png"
+header:
+  og_image: "/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png"
+  teaser: "/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png"
 tags: [jQuery, javascript]
 ---
 

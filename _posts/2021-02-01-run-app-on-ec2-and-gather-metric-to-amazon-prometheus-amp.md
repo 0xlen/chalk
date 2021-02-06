@@ -8,6 +8,7 @@ toc_icon: "cog"
 classes: wide
 header:
   og_image: /assets/images/posts/2021/02/run-app-on-ec2-and-gather-metric-to-amazon-prometheus-amp/ec2-with-amp-overview.png
+  teaser: /assets/images/posts/2021/02/run-app-on-ec2-and-gather-metric-to-amazon-prometheus-amp/ec2-with-amp-overview.png
 ---
 
 

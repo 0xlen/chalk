@@ -1,7 +1,9 @@
 ---
 title: "AWS Certified Developer Associate 認證考試準備及心得"
 description: "AWS Certified Developer Associate Preparation"
-og_image: "aws-da-cert.png"
+header:
+  og_image: "/assets/images/aws-da-cert.png"
+  teaser: "/assets/images/aws-da-cert.png"
 tags: ['aws', 'certificate']
 ---
 

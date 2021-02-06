@@ -5,6 +5,7 @@ tags: ['aws', 'amazon web services', 'EC2', 'Elastic Compute Cloud', 'amazon', '
 header:
   image: /assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/deployment-workflow-alb-ingress-controller-4-side-note-of-deregister.png
   og_image: /assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/deployment-workflow-alb-ingress-controller-4-side-note-of-deregister.png
+  teaser: /assets/images/posts/2020/10/zero-downtime-deployment-when-using-alb-ingress-controller/deployment-workflow-alb-ingress-controller-4-side-note-of-deregister.png
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"

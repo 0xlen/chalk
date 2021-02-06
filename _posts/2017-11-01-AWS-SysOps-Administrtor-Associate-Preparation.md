@@ -1,7 +1,9 @@
 ---
 title: "AWS Certified SysOps Administrator - Associate 認證考試準備及心得"
 description: "AWS Certified SysOps Administrator - Associate Preparation"
-og_image: "aws-sysops-cert.png"
+header:
+  og_image: /assets/images/aws-sysops-cert.png
+  teaser: /assets/images/aws-sysops-cert.png
 tags: ['aws', 'certificate']
 ---
 

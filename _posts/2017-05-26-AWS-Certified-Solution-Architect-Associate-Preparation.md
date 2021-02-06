@@ -1,7 +1,9 @@
 ---
 title: "AWS Certified Solution Architect Associate 認證考試準備及心得"
 description: "AWS Certified Solution Architect Associate Preparation"
-og_image: "aws-saa-cert.png"
+header:
+  og_image: "aws-saa-cert.png"
+  teaser: "aws-saa-cert.png"
 tags: ['aws', 'certificate']
 ---
 

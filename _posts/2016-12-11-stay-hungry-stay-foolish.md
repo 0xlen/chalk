@@ -1,7 +1,9 @@
 ---
 title: "Stay hungry, stay foolish"
 description: "求知若飢，虛心若愚。"
-og_image: "/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
+header:
+  og_image: "/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
+  teaser: "/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
 tags: [mood]
 ---
 

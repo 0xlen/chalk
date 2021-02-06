@@ -1,7 +1,9 @@
 ---
 title: "在 Laravel 中簡易的擴充 Blade Helper function"
 description: "Extend blade helper function in laravel"
-og_image: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
+header:
+  og_image: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
+  teaser: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
 tags: [php, laravel]
 ---
 
