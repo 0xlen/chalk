@@ -42,10 +42,10 @@ AWS CodeCommit 支持了多項實用的 [CloudWatch Event](https://docs.aws.amaz
 
 當這個 Lambda Function 被觸發，下列的行為將被依序執行：
 
-- 1. 使用 CodeCommit API 中的 [GetCommit](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetCommit.html) 操作取得最後一次的 Commit 紀錄。因為我想要比較原先上一次的 Commit ID 和最新的一筆，以進行變更的檢查。
-- 2. 對每一個 Commit 紀錄，使用 [GetDifferences](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetDifferences.html) API 操作取得任何紀錄追蹤檔案的新增、變更和刪除資訊。
-- 3. 從比較的結果中，合併相關的變更資訊，並且，將這項資訊依照定義好的 Email 訊息格式推送到 Lambda Function 中環境變數中定義的 Amazon SNS (SNS topic) 資源。
-- 4. 允許 Reviewers (可能是 Code Reviewers, operation team ... 等) 訂閱該 SNS Topic。如此一來，任何有關 CodeCommit 相應的更新都能推播到相關的訂閱者。
+- 使用 CodeCommit API 中的 [GetCommit](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetCommit.html) 操作取得最後一次的 Commit 紀錄。因為我想要比較原先上一次的 Commit ID 和最新的一筆，以進行變更的檢查。
+- 對每一個 Commit 紀錄，使用 [GetDifferences](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetDifferences.html) API 操作取得任何紀錄追蹤檔案的新增、變更和刪除資訊。
+- 從比較的結果中，合併相關的變更資訊，並且，將這項資訊依照定義好的 Email 訊息格式推送到 Lambda Function 中環境變數中定義的 Amazon SNS (SNS topic) 資源。
+- 允許 Reviewers (可能是 Code Reviewers, operation team ... 等) 訂閱該 SNS Topic。如此一來，任何有關 CodeCommit 相應的更新都能推播到相關的訂閱者。
 
 這個範例使用了 Python 和 Boto3 實作這項功能。完整的程式碼已被公開在 GitHub 上，你可以在 AWS 官方的 GitHub 上找到 - [aws-codecommit-file-change-publisher](https://github.com/aws-samples/aws-codecommit-file-change-publisher) 該範例。
 
@@ -83,12 +83,12 @@ AWS CodeCommit 支持了多項實用的 [CloudWatch Event](https://docs.aws.amaz
 {% include figure image_path="/assets/images/posts/2021/02/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit/upload-cfn-template.png" alt="選擇 CloudFormation template" caption="選擇 CloudFormation template" %}
 
 - 在指定參數項目中，填寫以下資訊：
-  - Stack Name: codecommit-sns-publisher (你可以指定自己的名稱)
-  - CodeS3BucketLocation: codecommit-sns-publisher (指定你剛剛在建立 S3 Bucket 步驟中上傳 Lambda deployment package 的 S3 Bucket 名稱)
-  - CodeS3KeyLocation: codecommit-sns-publisher.zip (這是上傳 Lambda deployment package 的名稱, 物件應為 zip 檔案) 
-  - CodeCommitRepo: sample-repo (你 CodeCommit repository 的名稱)
-  - MainBranchName: master (指定你想觸發事件的 branch 名稱)
-  - NotificationEmailAddress: user@example.com (指定要訂閱 SNS topic 的 Email 地址, 這個設置可以讓 CloudFormation template 建立一個 SNS topic 以推送通至訂閱者)
+  - **Stack Name**: codecommit-sns-publisher (你可以指定自己的名稱)
+  - **CodeS3BucketLocation**: `codecommit-sns-publisher` (指定你剛剛在建立 S3 Bucket 步驟中上傳 Lambda deployment package 的 S3 Bucket 名稱)
+  - **CodeS3KeyLocation**: `codecommit-sns-publisher.zip` (這是上傳 Lambda deployment package 的名稱, 物件應為 zip 檔案) 
+  - **CodeCommitRepo**: `sample-repo` (你 CodeCommit repository 的名稱)
+  - **MainBranchName**: `master` (指定你想觸發事件的 branch 名稱)
+  - **NotificationEmailAddress**: `user@example.com` (指定要訂閱 SNS topic 的 Email 地址, 這個設置可以讓 CloudFormation template 建立一個 SNS topic 以推送通至訂閱者)
 
 
 {% include figure image_path="/assets/images/posts/2021/02/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit/cfn-typing-parameters.png" alt="指定參數 Parameters" caption="指定參數 Parameters" %}
