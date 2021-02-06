@@ -8,15 +8,18 @@ header:
   og_image: /assets/images/support-mvp.jpg
 
 feature_row:
+  - image_path: "/assets/images/ecs-sme.jpg"
+    alt: "SME - Elastic Container Service (ECS)"
+    excerpt: "SME - Elastic Container Service (ECS)"
   - image_path: "/assets/images/support-mvp.jpg"
     alt: "Support MVP - Premium Support Taipei"
     excerpt: "Support MVP - Premium Support Taipei"
-  - image_path: "/assets/images/ecs-sme.jpg"
-    alt: "Subject Matter Expert (SME) - Elastic Container Service (ECS)"
-    excerpt: "Subject Matter Expert (SME) - Elastic Container Service (ECS)"
     url: "https://www.linkedin.com/in/easoncao/"
     btn_label: "See more on my LinkedIn"
     btn_class: "btn--inverse"
+  - image_path: "/assets/images/eks-sme.jpg"
+    alt: "SME - Elastic Kubernetes Service (EKS)"
+    excerpt: "SME - Elastic Kubernetes Service (EKS)"
 ---
 
 # About me
@@ -45,7 +48,7 @@ Name: Yang-Xin Cao (Eason Cao) / 中文名字：曹暘鑫 (Name in Mandarin/Chin
 
 我協助非常多不同規模的客戶業務達到成功，其中包含 Fortune 500 內的公司及擁有上百萬用戶規模的企業，包含透過提供教育訓練以技術角度向客戶分享更艱澀的問題，協助他們解決許多現實生活中因大規模、或是業務需求等所遭遇的技術挑戰。此外，我同時也在 2019 年獲得台北團隊的 Support MVP 頭銜。
 
-{% include feature_row id="feature_row" type="center" %}
+{% include feature_row id="feature_row" %}
 
 在過去也曾作為代表人物參與了團隊的招聘影片：
 
@@ -53,12 +56,15 @@ Name: Yang-Xin Cao (Eason Cao) / 中文名字：曹暘鑫 (Name in Mandarin/Chin
 
 我同時也在 2019 年於 Amazon 官方部落上公開了一篇技術文章，以分享知識讓更多人知道，你可以在這裡找到：
 - [Using AWS Lambda and Amazon SNS to Get File Change Notifications from AWS CodeCommit](https://aws.amazon.com/blogs/devops/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit/)
+- 中文: [身為 DevOps 你會想知道的 AWS 技巧 - 使用 AWS Lambda 和 Amazon SNS 取得來自 AWS CodeCommit (Git) 的檔案變更通知](/using-aws-lambda-and-amazon-sns-to-get-file-change-notifications-from-aws-codecommit)
 
 我也是一名馬拉松跑者 / 潛水員 (我擁有 PADI Advanced Open Water (AOW) 進階潛水員及 Enriched Air Diver (EAN) 高氧潛水員執照)，及喜愛力量訓練，並且以作為興趣的方式熱愛這些活動。以下是我過去參加的馬拉松及個人紀錄：
 
 - 2020 Oct - EVA AIR Run 長榮城市觀光馬松 (21km / `01:53:48`)
 - 2020 Aug - 國家地理路跑 (21km / `02:17:37`)
 - 2019 Oct - POCARI SWEAT RUN 2019 (21km / `02:20:45`)
+- 2020 Nov - TAROKO GORGE International Marathon (42km / `05:35:46`)
+- 2020 Dec - TAIPEI Marathon (42km / `04:36:08`)
 
 ## 一些關於我的一些怪地方 Some weird thing about me
 
