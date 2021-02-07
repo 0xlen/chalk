@@ -2,6 +2,7 @@
 title: "Fix node.js cannot update to 8.x or other version on ubuntu 16.04"
 description: "Troubleshooting with the node.js upgrade issue: Already up-to-date"
 tags: [nodejs]
+classes: wide
 ---
 
 ## Node.js upgrade issue 

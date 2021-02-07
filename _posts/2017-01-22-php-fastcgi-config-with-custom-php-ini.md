@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png"
   teaser: "/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png"
 tags: [php, apache]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2017/01/php-fastcgi-config-with-custom-php-ini/setting.png" alt="PHP FastCGI Settings" %}

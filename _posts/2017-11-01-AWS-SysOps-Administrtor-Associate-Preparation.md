@@ -5,6 +5,7 @@ header:
   og_image: /assets/images/aws-sysops-cert.png
   teaser: /assets/images/aws-sysops-cert.png
 tags: ['aws', 'certificate']
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/aws-sysops-cert.png" alt="https://www.certmetrics.com/amazon/public/badge.aspx?i=3&t=c&d=2017-10-18&ci=AWS00264275" caption="AWS Certified SysOps Administrator - Associate" %}

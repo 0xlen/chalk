@@ -2,6 +2,7 @@
 title: "從 vim pathogen 無痛轉移到 vundle"
 description: "Migrate vim-pathogen to vundle"
 tags: [vim]
+classes: wide
 ---
 
 ## 取得 Vundle

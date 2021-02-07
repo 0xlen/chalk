@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2016/11/hinet-ipv6/ping-facebook-v6.png"
   teaser: "/assets/images/posts/2016/11/hinet-ipv6/ping-facebook-v6.png"
 tags: [hinet, ipv6, dlink]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2016/11/hinet-ipv6/ping-facebook-v6.png" caption="Ping facebook using IPv6" alt="Ping facebook IPv6" %}

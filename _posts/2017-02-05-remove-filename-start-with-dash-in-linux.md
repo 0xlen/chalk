@@ -2,6 +2,7 @@
 title: "在 Linux 底下刪除以連接符號 - (dash) 開頭的檔案"
 description: "Remove filename start with dash in Linux"
 tags: [Linux]
+classes: wide
 ---
 
 在 Linux 使用 CLI 刪除檔案直覺想到的就是 `rm` 指令，

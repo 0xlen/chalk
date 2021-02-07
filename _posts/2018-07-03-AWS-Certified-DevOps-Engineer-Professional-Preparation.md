@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/aws-devops-pro-cert.png"
   teaser: "/assets/images/aws-devops-pro-cert.png"
 tags: ['aws', 'certificate', 'DevOps']
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/aws-devops-pro-cert.png" alt="https://www.certmetrics.com/amazon/public/badge.aspx?i=5&t=c&d=2017-12-10&ci=AWS00264275" caption="AWS Certified DevOps Engineer - Professional" %}

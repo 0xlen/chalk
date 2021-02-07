@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/01/let-phpunit-test-only-one-function/phpunit.png"
   teaser: "/assets/images/posts/2017/01/let-phpunit-test-only-one-function/phpunit.png"
 tags: [phpunit, unit-test, php]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2017/01/let-phpunit-test-only-one-function/phpunit.png" caption="PHPUnit" alt="PHPUnit" %}

@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png"
   teaser: "/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png"
 tags: [php, apache]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2017/01/apache-and-php-upload-large-file/box.png" alt="Upload large file" %}

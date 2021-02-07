@@ -2,6 +2,7 @@
 title: "Memory Management and Paging Quick Note"
 description: "Memory management and paging quick note"
 tags: ["operating-system"]
+classes: wide
 ---
 
 ## 對於 Paging 的疑惑

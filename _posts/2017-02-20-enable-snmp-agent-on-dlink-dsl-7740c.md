@@ -2,6 +2,7 @@
 title: "D-Link DSL-7740C 啟用 SNMP"
 description: "Enable SNMP Agent on D-Link DSL-7740C step by step."
 tags: [dlink, hinet]
+classes: wide
 ---
 
 一般光纖 100M/40M 家用網路的使用者若想要進行網路流量、路由器監控，

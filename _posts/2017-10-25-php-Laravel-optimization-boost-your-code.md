@@ -2,6 +2,7 @@
 title: "Laravel PHP 優化之路：效能瓶頸的解決方案"
 description: "PHP Laravel Optimization, boost your code."
 tags: [php, laravel]
+classes: wide
 ---
 
 ## 前言

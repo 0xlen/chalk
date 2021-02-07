@@ -9,6 +9,7 @@ classes: wide
 header:
   og_image: /assets/images/posts/2020/10/coredns-resolution-truncation-issue-on-kubernetes-kube-dns/eks-dns-resolution-flow.png
   teaser: /assets/images/posts/2020/10/coredns-resolution-truncation-issue-on-kubernetes-kube-dns/eks-dns-resolution-flow.png
+classes: wide
 ---
 
 This article is describing the thing you need to aware for DNS resolution issue can occur on Kubernetes. Especially when your Pod is relying on CoreDNS(kube-dns) to resolve DNS record when connecting to Amazon ElastiCache or target with large response payload, the issue potentially can happen.

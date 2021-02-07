@@ -2,6 +2,7 @@
 title: "SVM Quickstart"
 description: "Support Vector Machine quick start"
 tags: [svm, machine-learning]
+classes: wide
 ---
 
 Reference:

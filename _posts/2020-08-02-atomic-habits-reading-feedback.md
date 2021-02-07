@@ -2,6 +2,7 @@
 title: "[Book] 原子習慣：細微改變帶來巨大成就的實證法則 - 我的心得及實作"
 description: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones reading feedback"
 tags: ['book', 'reading', 'habit', 'atomic', 'kindle', 'amazon']
+classes: wide
 
 feature_row:
   - image_path: "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B07VRLS2LG&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=eason06b-20"

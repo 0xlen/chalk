@@ -2,6 +2,7 @@
 title: "快速建立 ubuntu 應用程式啟動圖示"
 description: "Quickly create the ubuntu application launch icon"
 tags: [ubuntu]
+classes: wide
 ---
 
 ## 建立 ubuntu 應用程式啟動圖示

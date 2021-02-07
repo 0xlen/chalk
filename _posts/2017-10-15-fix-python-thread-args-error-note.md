@@ -2,6 +2,7 @@
 title: "Python threading.Thread 錯誤筆記"
 description: "How to fix the error 'TypeError: subProgram() argument after * must be an iterable, not Queue' in python threading programming."
 tags: ['python']
+classes: wide
 ---
 
 最近在試著用 Python 寫多線程的程式遇到一點小狀況，範例程式如下：

@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
   teaser: "/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg"
 tags: [mood]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2016/12/stay-hungry-stay-foolish/quote.jpg" caption="Stay hungry, stay foolish" alt="Stay hungry, stay foolish" %}

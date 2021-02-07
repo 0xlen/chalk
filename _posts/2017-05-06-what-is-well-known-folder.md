@@ -2,6 +2,7 @@
 title: "解析 .well-known 資料夾"
 description: "What is /.well-known/ folder? "
 tags: [networking]
+classes: wide
 ---
 
 ## What is /.well-known/ ?

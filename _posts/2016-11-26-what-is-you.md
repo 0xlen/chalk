@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2016/11/what-is-you/you.jpg"
   teaser: "/assets/images/posts/2016/11/what-is-you/you.jpg"
 tags: [mood]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2016/11/what-is-you/you.jpg" caption="What is YOU?" alt="What is YOU?" %}

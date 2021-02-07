@@ -5,6 +5,7 @@ tags: ['aws', 'amazon web services', 'EC2', 'Elastic Compute Cloud', 'amazon', '
 header:
   og_image: /assets/images/posts/2020/08/security-group-manager-alexa-skill/security-group-manager-alexa-skill-architecture.png
   teaser: /assets/images/posts/2020/08/security-group-manager-alexa-skill/security-group-manager-alexa-skill-architecture.png
+classes: wide
 ---
 
 隨著 COVID-19 疫情大爆發，科技圈再次掀起了一股遠端辦公的趨勢，遠距工作的形式也逐漸改變許多人的工作型態。身為一名工程師，因應疫情，今年也頻繁的在家辦公也好幾個月了 (還好台灣還很安全)，仍有很多與傳統地域限制型態的工作模式有很多不同的地方。

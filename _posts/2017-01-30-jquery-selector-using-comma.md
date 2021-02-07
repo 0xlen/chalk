@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png"
   teaser: "/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png"
 tags: [jQuery, javascript]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2017/01/jquery-selector-using-comma/jquery.png" caption="jQuery! write less, do more." alt="jQuery! write less, do more." %}

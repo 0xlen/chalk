@@ -2,6 +2,7 @@
 title: "/etc/fstab file Quick view"
 description: "Meet with /etc/fstab file in Linux"
 tags: [linux]
+classes: wide
 ---
 
 ## What is /etc/fstab

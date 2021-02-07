@@ -2,6 +2,7 @@
 title: "設定 zsh 為 tmux 預設的 shell"
 description: "Set the zsh as the default shell for tmux"
 tags: [Linux]
+classes: wide
 ---
 
 ## 設定 tmux 使用的 shell

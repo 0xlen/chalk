@@ -5,6 +5,7 @@ header:
   og_image: "aws-saa-cert.png"
   teaser: "aws-saa-cert.png"
 tags: ['aws', 'certificate']
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/aws-saa-cert.png" alt="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-05-19&ci=AWS00264275" caption="AWS Solutions Architect Associate" %}

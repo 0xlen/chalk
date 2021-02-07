@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
   teaser: "/assets/images/posts/2017/02/laravel-5.4-work-with-vue-notice/laravel.png"
 tags: [php, laravel]
+classes: wide
 ---
 
 在 `App/Providers/AppServiceProvider.php` 檔案內 `register()` 新增 loader 程式碼。

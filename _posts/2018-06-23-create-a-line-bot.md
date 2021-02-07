@@ -2,6 +2,7 @@
 title: "使用 AWS Lambda 建立 Line bot"
 description: "Use AWS Lambda to create a line bot"
 tags: ['aws', 'python']
+classes: wide
 ---
 
 這篇文章主要是記錄如何透過 AWS Lambda 的服務，同時利用 AWS API Gateway，配合 Line 提供的 Bot API，打造屬於自己的 Line Bot。

@@ -5,6 +5,7 @@ header:
   og_image: "/assets/images/posts/2017/01/git-stash-only-one-file/git.png"
   teaser: "/assets/images/posts/2017/01/git-stash-only-one-file/git.png"
 tags: [git]
+classes: wide
 ---
 
 {% include figure image_path="/assets/images/posts/2017/01/git-stash-only-one-file/git.png" alt="git" %}
