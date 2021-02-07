@@ -140,6 +140,8 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
 
+# Liker ID to enable LikeCoin button
+liker_id: easoncao
 
 # Reading Files
 include:

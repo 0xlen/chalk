@@ -70,6 +70,13 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
+      {% if site.liker_id %}
+      <iframe
+        style="width: 100%; max-width: 485px; height: 170px; margin: auto; overflow: hidden; display: block;"
+        src="https://button.like.co/in/embed/{{site.liker_id}}/button?referrer={{ page.url | absolute_url | cgi_escape }}" frameBorder="0">
+      </iframe>
+      {% endif %}
+
       {% include post_pagination.html %}
     </div>
 
