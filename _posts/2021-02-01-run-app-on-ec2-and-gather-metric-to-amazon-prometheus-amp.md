@@ -242,6 +242,104 @@ Right now, if the Prometheus server can correctly write metric through AWS SigV4
 {% include figure image_path="/assets/images/posts/2021/02/run-app-on-ec2-and-gather-metric-to-amazon-prometheus-amp/grafana-dashboard-view-amp-metric.png" alt="View collected metrics on AMP in Grafana dashboard" caption="View collected metrics on AMP in Grafana dashboard" %}
 
 
+## Troubleshooting
+
+### How to use curl to query my Amazon Prometheus to check if the connectivity, or, IAM authentication is working or not?
+
+To test the Sigv4, you can run the proxy and test the function with `curl` command. If you also would like to specify the IAM credential, choose either one of method to test the proxy and see if it can route the traffic for you:
+
+```bash
+# Env vars
+$ docker run --rm -ti \
+  -e 'AWS_ACCESS_KEY_ID=<YOUR ACCESS KEY ID>' \
+  -e 'AWS_SECRET_ACCESS_KEY=<YOUR SECRET ACCESS KEY>' \
+  -p 8005:8005 \
+  public.ecr.aws/aws-observability/aws-sigv4-proxy:1.0 --name aps --region us-east-1 --host aps-workspaces.us-east-1.amazonaws.com --port :8005
+
+# Shared Credentials
+$ docker run --rm -ti \
+  -v ~/.aws:/root/.aws \
+  -p 8005:8005 \
+  -e 'AWS_PROFILE=<SOME PROFILE>' \
+  public.ecr.aws/aws-observability/aws-sigv4-proxy:1.0 --name aps --region us-east-1 --host aps-workspaces.us-east-1.amazonaws.com --port :8005
+```
+
+Once the `aws-sigv4-proxy` is up and running, you can simply to use `curl` to test the local endpoint:
+
+- An example with normal request but did not have query:
+
+```bash
+$ curl http://localhost:8005/workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query -vvv
+
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8005 (#0)
+> GET /workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query HTTP/1.1
+> Host: localhost:8005
+> User-Agent: curl/7.53.1
+> Accept: */*
+>
+< HTTP/1.1 400 Bad Request
+< Content-Type: application/json
+< Date: Tue, 09 Feb 2021 15:02:56 GMT
+< Server: amazon
+< X-Amzn-Requestid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+< Content-Length: 125
+<
+* Connection #0 to host localhost left intact
+{"status":"error","errorType":"bad_data","error":"invalid parameter 'query': 1:1: parse error: no expression found in input"}
+```
+
+- An example with normal request by feeding query according to [HTTP API](https://prometheus.io/docs/prometheus/latest/querying/api/):
+
+```
+$ curl http://localhost:8005/workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query?query=up -vvv
+
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8005 (#0)
+> GET /workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query?query=up HTTP/1.1
+> Host: localhost:8005
+> User-Agent: curl/7.53.1
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: application/json
+< Date: Tue, 09 Feb 2021 15:10:49 GMT
+< Server: amazon
+< X-Amzn-Requestid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+< Content-Length: 63
+<
+* Connection #0 to host localhost left intact
+{"status":"success","data":{"resultType":"vector","result":[]}}
+```
+
+- An example with failed response due to lack of IAM permission(`aps:QueryMetrics`) for my IAM user/role:
+
+```bash
+$ curl http://localhost:8005/workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query -vvv
+
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8005 (#0)
+> GET /workspaces/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/api/v1/query HTTP/1.1
+> Host: localhost:8005
+> User-Agent: curl/7.53.1
+> Accept: */*
+>
+< HTTP/1.1 403 Forbidden
+< Content-Length: 200
+< Content-Type: application/json
+< Date: Tue, 09 Feb 2021 15:07:55 GMT
+< Server: amazon
+< X-Amzn-Errortype: AccessDeniedException
+< X-Amzn-Requestid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+< X-Amzn-Requestid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+<
+* Connection #0 to host localhost left intact
+{"Message":"User: arn:aws:iam::111111111111:user/myIAMUser is not authorized to perform: aps:QueryMetrics on resource: arn:aws:aps:us-east-1:111111111111:workspace/ws-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"}
+```
+
 ## Conclusion
 
 In this article, it shows a example to use Amazon Managed Service for Prometheus (AMP) to gather metrics when running standalone application on EC2 instance, rather than having Kubernetes to deploy. As it might be difficult to understand what things need to be noticed, so I shared configuration and steps. Giving the overview and share some tips you have to know if you are trying to push metrics to AMP.
