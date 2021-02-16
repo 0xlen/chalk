@@ -9,7 +9,7 @@ feature_row:
     alt: "原子習慣: 細微改變帶來巨大成就的實證法則 (Traditional Chinese Edition)"
     title: "原子習慣: 細微改變帶來巨大成就的實證法則"
     excerpt: "數位版售價 $7.84"
-    url: "https://www.amazon.com/gp/product/B07VRLS2LG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07VRLS2LG&linkCode=as2&tag=eason06b-20&linkId=0fbf9627bb07b21ea1e12c813a1b89d3"
+    url: "https://amzn.to/2ZmQL1S"
     btn_label: "Buy on Amazon"
     btn_class: "btn--inverse"
 
@@ -63,7 +63,7 @@ marathon_records_in_2020:
 
 ## 前言
 
-{% include figure image_path="https://m.media-amazon.com/images/I/41dx7A1jFFL.jpg" caption="[原子習慣: 細微改變帶來巨大成就的實證法則 (Traditional Chinese Edition) - Buy kindle version on Amazon!](https://www.amazon.com/gp/product/B07VRLS2LG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07VRLS2LG&linkCode=as2&tag=eason06b-20&linkId=0fbf9627bb07b21ea1e12c813a1b89d3)" %}
+{% include figure image_path="https://m.media-amazon.com/images/I/41dx7A1jFFL.jpg" caption="[原子習慣: 細微改變帶來巨大成就的實證法則 (Traditional Chinese Edition) - Buy kindle version on Amazon!](https://amzn.to/2ZmQL1S)" %}
 
 ## 概覽
 

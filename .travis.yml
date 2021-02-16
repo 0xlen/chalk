@@ -11,7 +11,7 @@ branches:
 script:
     - git config --global user.email "eason@easoncao.com"
     - git config --global user.name "Eason Cao"
-    - git clone https://$GH_TOKEN@github.com/0xlen/blog blog
+    - git clone --branch master https://$GH_TOKEN@github.com/0xlen/blog blog
     - cd blog/
     - ./bin/travis-build
 rvm:
