@@ -26,13 +26,6 @@ classes: wide
 
 藉這個機會就給他申請了.
 
-> 後來神人我朋友[魯哲](https://lucher.club/) 
->
-> [分享了一篇hinet的公告](http://www.hinet.net/notifyPage.html?id=1581ecec33a000004a4f&type=0)
->
-> 看來會不平靜一陣子.
-
-
 ## 申請IPv6
 
 這部份原本想截圖, 不過發現申請過後沒辦法照正常的程序跑一遍,
@@ -75,6 +68,19 @@ classes: wide
 > 密碼(北區): chtnvdsl  
 > 密碼(中區): chtcvdsl  
 > 密碼(南區): chtsvdsl
+
+### 2021 更新 (DSL-7740C 適用帳號密碼)
+
+最近注意到上述的密碼基於韌體更新有一些變動，如果無法登入的朋友可以嘗試以下訊息：
+
+- 帳號: cht
+- 密碼: 740C+LAN MAC 末四碼
+
+MAC 位置可以翻下機器背面會有相關的資訊，例如：
+
+{% include figure image_path="/assets/images/posts/2016/11/hinet-ipv6/dsl-7740c-mac-address.png" caption="DSL-7740C MAC 位置" alt="DSL-7740C MAC 位置" %}
+
+像上述範例密碼可以為：`740CBA87`
 
 ## 確認設定的帳號
 
